@@ -1,0 +1,27 @@
+{
+  "name": "barduck-sports-bar",
+  "version": "1.0.0",
+  "description": "Спорт-бар BarDuck - сайт с бронированием, меню и расписанием трансляций",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "sports-bar",
+    "booking",
+    "menu",
+    "football"
+  ],
+  "author": "BarDuck",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

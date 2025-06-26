@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Проксирование API запросов к Node.js серверу
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/(.*)$ http://127.0.0.1:3000/api/$1 [P,L]
+
+# Остальные запросы обрабатываются как обычно
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]
+
+# Настройки для проксирования
+ProxyPreserveHost On
+ProxyRequests Off
