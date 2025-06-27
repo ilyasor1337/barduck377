@@ -367,34 +367,62 @@ main {
     height: 50px; /* Уменьшаем размер логотипа на мобильных */
   }
 
+  .burger-menu {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 1100;
+    background: none;
+    border: none;
+    margin-left: 10px;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #ff6b00;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
   .nav-list {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 70%;
+    right: -100vw;
+    width: 70vw;
     height: 100vh;
     background: #2c2c2c;
     flex-direction: column;
-    padding: 80px 20px;
-    transition: 0.3s;
+    align-items: flex-start;
+    padding: 80px 30px;
+    transition: right 0.3s;
+    z-index: 1001;
+    gap: 30px;
+    font-size: 22px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
   }
 
   .nav-list.active {
     right: 0;
   }
 
-  .burger-menu {
-    display: flex;
+  .nav-list li {
+    width: 100%;
   }
 
-  .burger-menu span {
+  .nav-list a {
     display: block;
-    width: 28px;
-    height: 4px;
-    background: #fff;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: 0.3s;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 22px;
+    border-bottom: 1px solid #444;
   }
 
   .matches-list,
@@ -413,6 +441,7 @@ main {
   }
 }
 
+/* По умолчанию бургер скрыт на десктопе */
 .burger-menu {
   display: none;
 }
